@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Next</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: green;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        h2 {
+            color: yellow; 
+        }
+        
+        .result {
+            font-size: 18px;
+            margin-top: 20px;
+            padding: 10px;
+            border: 2px solid red; /* Dark Gray */
+            border-radius: 5px;
+            background-color: #ffffcc; /* Light Yellow */
+            display: inline-block;
+            color: #333; /* Dark Gray */
+        }
+    </style>
+    <script language="javascript"> 
+        function display() {
+            var y = parseInt(prompt("Enter any number"));
+            var x, sum = 0;
+            var resultDiv = document.createElement("div");
+            resultDiv.className = "result";
+            for (x = 1; x <= y; x++) {
+                resultDiv.innerHTML += x + "<br>";
+                sum += x;
+            }
+            resultDiv.innerHTML += "<p>Sum = " + sum + "</p>";
+            document.body.appendChild(resultDiv);
+        }
+    </script>
+</head>
+<body onload="display()">
+</body>
+</html>
